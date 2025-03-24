@@ -1,0 +1,19 @@
+# Ignore virtual environments
+venv/
+
+# Ignore environment files
+.env
+
+# Ignore cache files
+__pycache__/
+*.py[cod]
+
+# Ignore log files
+*.log
+
+# Ignore specific binary data and metadata files
+*.bin
+*.pickle
+
+.DS_Store
+
