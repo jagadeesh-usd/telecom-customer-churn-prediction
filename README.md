@@ -23,31 +23,31 @@ We use the **Iranian Telecom Customer Churn dataset** from UCI:
 - Highly imbalanced (~15% churn rate)
 - Includes features like: `call_failure`, `seconds_of_use`, `frequency_of_SMS`, `charge_amount`, `complains`, `tariff_plan`, `status`, and `age_group`.
 
-📎 Source: [UCI Telecom Dataset](https://archive.ics.uci.edu/ml/datasets/iranian+churn+dataset)
+Source: [UCI Telecom Dataset](https://archive.ics.uci.edu/ml/datasets/iranian+churn+dataset)
 
 ---
 
 ## Methodology
 
-### 🔧 Data Preparation
+### Data Preparation
 
 - Cleaned nulls, duplicates, and outliers.
 - Removed 85 inactive zero-usage customer records.
 - Engineered `customer_value` as the target variable for regression.
 - Applied log transformation to `customer_value` to reduce skew.
 
-### 📊 Exploratory Data Analysis
+### Exploratory Data Analysis
 
 - Identified feature correlations and multicollinearity.
 - Visualized churn trends across usage and demographic segments.
 
-### 🔁 Two-Stage Modeling Framework
+### Two-Stage Modeling Framework
 
 #### **Stage 1: CLV Prediction (Regression)**
 
 - Models: Linear Regression, Polynomial Regression, Decision Tree, Random Forest
 - Metric: RMSE, R² (with 5-fold CV)
-- ✅ Best Model: **Random Forest** (R² = 0.995 on 5-fold cross-validation).
+- Best Model: **Random Forest** (R² = 0.995 on 5-fold cross-validation).
 
 
 #### **Stage 2: Churn Classification**
@@ -55,7 +55,7 @@ We use the **Iranian Telecom Customer Churn dataset** from UCI:
 - Models: Logistic Regression (with actual and predicted CLV), SVM (RBF), Random Forest, XGBoost
 - Input:  All features, including predicted CLV.
 - Metrics: Accuracy, F1-score, AUC
-- ✅ Best Model: **XGBoost** (AUC = 0.9845)
+- Best Model: **XGBoost** (AUC = 0.9845)
 
 ---
 
@@ -63,7 +63,7 @@ We use the **Iranian Telecom Customer Churn dataset** from UCI:
 
 We used SHAP values (XGBoost) to understand feature contributions and model behavior.
 
-- 🔑 Top drivers: `status_2`, `complains`, `frequency_of_SMS`, `seconds_of_use`, `customer_value`
+- Top drivers: `status_2`, `complains`, `frequency_of_SMS`, `seconds_of_use`, `customer_value`
 
 ---
 
@@ -101,10 +101,12 @@ We used SHAP values (XGBoost) to understand feature contributions and model beha
 │   ├── 04_a_logistic_regression.ipynb
 │   ├── 04_b_logistic_regression_intp.ipynb
 │   ├── 05_a_descision_reg.ipynb
+|   ├── 05_b_descision_reg_intp.ipynb
 │   ├── 06_a_svm_classifier.ipynb
 │   ├── 07_a_rf_xgboost_classifier.ipynb
-│   └── ... others
+
 ```
+
 ---
 
 ## How to Use This Project
@@ -133,11 +135,11 @@ jupyter notebook
 ---
 
 ## Contact
-👥 **AAI-501 Group 2**  
+**AAI-501 Group 2**  
+- Zoher Sabunwala
 - Jagadeesh Kumar Sellappan  
 - Jasmeet Kaur  
-- Zoher Sabunwala
 
-📫 For questions or contributions, feel free to open an issue or contact the team.
+For questions or contributions, feel free to open an issue or contact the team.
 
 ```
