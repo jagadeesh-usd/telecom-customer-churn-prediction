@@ -8,3 +8,5 @@ scipy
 plotly
 shap
 xgboost
+statsmodels
+imblearn
